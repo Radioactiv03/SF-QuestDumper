@@ -14,14 +14,13 @@ namespace
 			{
 				AllocConsole();
 				freopen("CONOUT$", "w", stdout);
-				
+
 				auto dh = RE::TESDataHandler::GetSingleton();
 				auto questList = dh->formArrays[0x5B];
 				auto QuestForms = questList.formArray.data();
 				for (const auto& quest : dh->GetFormArray<RE::TESQuest>()) {
 					quest->GetDisplayFullBaseName();
 				}
-				
 			}
 			break;
 		default:
